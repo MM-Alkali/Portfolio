@@ -24,6 +24,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ccc;
+  color: #fff; 
+}
+
+footer p {
+  font-size: 14px; 
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 12px; /* font size for small screens */
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  footer p {
+    font-size: 16px; /* font size for medium screens */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  footer p {
+    font-size: 14px; /* font size for large screens */
+  }
 }
 
 img {
@@ -110,177 +135,130 @@ a {
 }
 
 /***********************************HEADER STYLES***********************************/
-
-#main-header {
+header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 50px;
   width: 100%;
-  padding: 20px 0 10px 0;
   z-index: 1;
-  background: #ccc;
-  overflow: hidden;
+  background-color: #a3a3a3;
 }
 
-@media screen and (max-width: 760px) {
-  #main-header {
-    padding-top: 25px;
-  }
-}
-
-.open-nav {
-  max-height: 400px !important;
-}
-
-.open-nav .mobile-toggle {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
-.logo {
-  float: left;
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 10px;
-  line-height: 1;
+header .navbar-brand {
   font-size: 27pt;
   font-weight: bold;
   color: #454545;
   font-family: "Dancing Script", cursive;
 }
 
-@media screen and (max-width: 760px) {
-  .logo {
-    float: none;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  #main-header nav {
-    width: 100%;
-  }
-}
-
-#main-header nav ul {
-  float: right;
-  overflow: hidden;
-  list-style: none;
-  text-align: right;
-}
-
-@media screen and (max-width: 760px) {
-  #main-header nav ul {
-    width: 100%;
-    float: left;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-}
-
-#main-header nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-  line-height: 1.5;
-}
-
-@media screen and (max-width: 760px) {
-  #main-header nav ul li {
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-  }
-}
-
-#main-header nav ul a {
+header .navbar-nav .nav-link {
   color: #454545;
-  text-transform: uppercase;
   font-size: 14px;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
+  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
-#main-header nav ul .active {
+header .navbar-nav .nav-link.active,
+header .navbar-nav .nav-link:hover {
   color: #e52e2d;
 }
 
-#main-header nav ul a:hover {
-  color: #e52e2d;
-}
-
-.mobile-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 20px;
-  position: absolute;
-  right: 22px;
-  top: 0;
-  width: 30px;
-  -webkit-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-}
-
-@media screen and (max-width: 760px) {
-  .mobile-toggle {
-    display: block;
+@media screen and (max-width: 768px) {
+  header .navbar-brand {
+    font-size: 10pt;
   }
-}
+  
+  header .navbar-nav .nav-link {
+    font-size: 7px;
+  }
 
-.mobile-toggle span {
-  width: 30px;
-  height: 4px;
-  margin-bottom: 6px;
-  border-radius: 1000px;
-  background: #454545;
-  display: block;
-}
+  .navbar-toggler {
+    margin-right: 0;
+    background-color: #ccc;
+    border: none;
+  }
 
-.header-wrapper {
-  max-width: 95%;
-  margin: 0 auto;
-  position: relative;
-  padding: auto;
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
 }
 
 /***********************************PROFILE STYLES***********************************/
 
 #profile {
-  margin-top: 70px;
-  margin-bottom: 0px;
+  margin-top: 50px;
+  margin-bottom: -70px;
   height: 100%;
   position: relative;
 }
 
-#particles-js {
-  width: 100%;
-  height: 100%;
-}
-
 .profile-content {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.profile img {
+  width: 300px;
+  height: 350px;
+  border-radius: 50%;
+}
 
 .profile-content h1 {
-  font-size: 50px;
-  color: #fff;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .profile-content h2 {
-  font-size: 30px;
-  color: #bfbfbf;
+  font-size: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  #profile {
+    margin-bottom: -280px;
+  }
+
+  .profile img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: -150px;
+    margin-bottom: 30px;
+  }
+
+  .profile-content h1 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-content h2 {
+    font-size: 1rem;
+  }
+}
+
+.profile-content .download {
+  color: #bfbfbf;
+  background: none;
+  border: 1px #bfbfbf solid;
+  border-radius: 1000px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* .profile-content .download a {
+  color: #bfbfbf;
+  font-size: 16px;
+}
+
+.profile-content .download:hover {
+  border-color: #e52e2d;
+} */
 
 .profile-content .download {
   color: #bfbfbf;
@@ -298,25 +276,36 @@ a {
 }
 
 .profile-content .download:hover {
-  border-color: #e52e2d;
+  color: #e52e2d;
 }
 
-.profile img {
-  width: 300px;
-  height: 350px;
-  border-radius: 50%;
+@media screen and (max-width: 768px) {
+  .profile-content .download {
+    width: 120px;
+    font-size: .2rem; 
+  }
 }
+
 
 .profile-social {
+  width: 90%;
   margin-top: 30px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
 }
+.profile-social {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .profile-social li {
   list-style: none;
-  margin: 5px 50px;
+  margin: 5px;
 }
 
 .profile-social .fab,
@@ -341,9 +330,13 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .profile-content img {
-    width: 200px;
-    height: 300px;
+  .profile-social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-social li {
+    margin: 5px;
   }
 }
 
@@ -365,6 +358,11 @@ a {
   transform: translateX(0);
 }
 
+.topic-table {
+  margin-bottom: 30px;
+  width: 98%;
+}
+
 .topic-row {
   display: flex;
   align-items: center;
@@ -376,7 +374,7 @@ a {
 
 .topic-cell {
   border-bottom: 1px solid #ddd;
-  width: 600px;
+  width: 98%;
   padding: 10px;
   cursor: pointer;
   font-size: 20px;
@@ -384,6 +382,13 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  .topic-cell {
+    font-size: 14px;
+  }
+}
+
 
 .topic-content {
   padding: 10px;
