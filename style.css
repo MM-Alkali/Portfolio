@@ -181,7 +181,7 @@ header .navbar-nav .nav-link:hover {
 
 #profile {
   margin-top: 120px;
-  margin-bottom: -50px;
+  margin-bottom: 0px;
   height: 80%;
   position: relative;
 }
@@ -212,9 +212,8 @@ header .navbar-nav .nav-link:hover {
 
 @media screen and (max-width: 768px) {
   #profile {
-    margin-bottom: -30px;
+    margin-bottom: 0px;
     margin-top: 80px;
-    /* height: 100%; */
     position: relative;
     max-height: 400px;
   }
