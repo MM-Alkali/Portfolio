@@ -180,8 +180,8 @@ header .navbar-nav .nav-link:hover {
 /***********************************PROFILE STYLES***********************************/
 
 #profile {
-  margin-top: 50px;
-  margin-bottom: -70px;
+  margin-top: 120px;
+  margin-bottom: -50px;
   height: 80%;
   position: relative;
 }
