@@ -593,9 +593,11 @@ header .navbar-nav .nav-link:hover {
 }
 
 .col {
-  width: calc(25% - 2rem);
+  width: calc(20% - 2rem);
   margin: 1rem;
   cursor: pointer;
+  min-height: 280px;
+  min-width: 280px;
 }
 
 .app-container {
@@ -621,6 +623,7 @@ header .navbar-nav .nav-link:hover {
   text-align: center;
   min-height: 280px;
   height: auto;
+  width: auto;
   border-radius: 10px;
   color: #fff;
   font-size: 1.5rem;
